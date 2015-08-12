@@ -1,0 +1,38 @@
+[core]
+	editor = gvim
+	quotepath = false
+[user]
+	name = Chen
+	email = neil_chen_0918@live.cn
+[gui]
+	encoding = utf-8
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status
+	ps = push
+	pl = pull
+	cm = commit -am
+	ad = add .
+	ck = checkout
+	cl = clone
+
+[i18n]
+	logoutputencoding = utf-8
+	commitencoding= utf-8
+[i18n "commit"]
+	encoding = utf-8
+[push]
+	default = simple
+
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = No
+
+[merge]
+	tool = vimdiff
+
+[mergetool]
+	prompt = false
