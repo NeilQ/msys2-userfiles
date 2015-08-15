@@ -115,7 +115,7 @@ endif
 " 如果想在 windows 安装就必需先安装 "git for window"，可查阅网上资料
 
 set nocompatible                                      "禁用 Vi 兼容模式
-filetype off                                          "禁用文件类型侦测
+"filetype off                                          "禁用文件类型侦测
 
 if g:islinux
     set rtp+=~/.vim/bundle/vundle/
@@ -141,7 +141,6 @@ Bundle 'Mark--Karkat'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'OmniCppComplete'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'repeat.vim'
 Bundle 'msanders/snipmate.vim'
@@ -152,6 +151,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'taglist.vim'
 Bundle 'TxtBrowser'
 Bundle 'ZoomWin'
+Bundle 'OrangeT/vim-csharp'
 
 " -----------------------------------------------------------------------------
 "  < 编码配置 >

@@ -16,11 +16,10 @@
 # User dependent .bash_profile file
 
 export LESSCHARSET=utf-8
-
-alias l='/bin/ls --show-control-chars --color=auto'
-alias la='/bin/ls -aF --show-control-chars --color=tty'
-alias ll='/bin/ls -alF --show-control-chars --color=auto'
-alias ls='/bin/ls --show-control-chars --color=auto
+alias l='ls --show-control-chars --color=auto'
+alias la='ls -aF --show-control-chars --color=auto'
+alias ll='ls -alF --show-control-chars --color=auto'
+alias ls='ls --show-control-chars --color=auto'
 
 # source the users bashrc if it exists
 if [ -f "${HOME}/.bashrc" ] ; then
@@ -41,4 +40,4 @@ fi
 # if [ -d "${HOME}/info" ]; then
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
-mount -fo binary,noacl,posix=0,user D:/workspace ~/workspace
+mount -fo binary,noacl,posix=0,user f:/github ~/workspace
