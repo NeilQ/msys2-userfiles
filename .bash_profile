@@ -16,7 +16,6 @@
 # User dependent .bash_profile file
 
 export LESSCHARSET=utf-8
-
 alias l='ls --show-control-chars --color=auto'
 alias la='ls -aF --show-control-chars --color=tty'
 alias ll='ls -alF --show-control-chars --color=auto'
@@ -41,5 +40,9 @@ fi
 # if [ -d "${HOME}/info" ]; then
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
+<<<<<<< HEAD
 mount -fo binary,noacl,posix=0,user D:/workspace ~/workspace
 mount -fo binary,noacl,posix=0,user "D:/Program Files (x86)/Vim/vimfiles" ~/vimfiles
+=======
+mount -fo binary,noacl,posix=0,user f:/github ~/workspace
+>>>>>>> dcc7dcaee0850fb72471292116c1e09097150fa8

@@ -17,11 +17,6 @@
 
 # Set user-defined locale
 
-export LESSCHARSET=utf-8
-alias l='/bin/ls --show-control-chars --color=auto'
-alias la='/bin/ls -aF --show-control-chars --color=auto'
-alias ll='/bin/ls -alF --show-control-chars --color=auto'
-alias ls='/bin/ls --show-control-chars --color=auto'
 # This file is not read by bash(1) if ~/.bash_profile or ~/.bash_login
 # exists.
 #
