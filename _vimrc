@@ -255,12 +255,10 @@ if g:isGUI
     nmap <silent> <c-F11> :if &guioptions =~# 'm' <Bar>
         \set guioptions-=m <Bar>
         \set guioptions-=T <Bar>
-        "\set guioptions-=r <Bar>
         \set guioptions-=L <Bar>
     \else <Bar>
         \set guioptions+=m <Bar>
         \set guioptions+=T <Bar>
-        " \set guioptions+=r <Bar>
         \set guioptions+=L <Bar>
     \endif<CR>
 endif
