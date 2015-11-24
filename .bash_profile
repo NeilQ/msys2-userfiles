@@ -17,13 +17,11 @@
 
 export LESSCHARSET=utf-8
 alias l='ls --show-control-chars --color=auto'
-<<<<<<< HEAD
-alias la='ls -aF --show-control-chars --color=tty'
-=======
 alias la='ls -aF --show-control-chars --color=auto'
->>>>>>> dcc7dcaee0850fb72471292116c1e09097150fa8
 alias ll='ls -alF --show-control-chars --color=auto'
 alias ls='ls --show-control-chars --color=auto'
+alias win='winpty'
+alias python='python -i'
 
 # source the users bashrc if it exists
 if [ -f "${HOME}/.bashrc" ] ; then
