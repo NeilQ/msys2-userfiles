@@ -1,6 +1,7 @@
 [core]
 	editor = gvim
 	quotepath = false
+    ignorecase = false
 [user]
 	name = Chen
 	email = neil_chen_0918@live.cn
