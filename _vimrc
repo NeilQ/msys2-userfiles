@@ -127,6 +127,9 @@ else
     call vundle#rc('$VIM/vimfiles/bundle/')
 endif
 
+" Markdown
+au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
+
 " 使用Vundle来管理插件，这个必须要有。
 Bundle 'gmarik/vundle'
 
