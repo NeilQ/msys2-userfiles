@@ -16,12 +16,18 @@
 # User dependent .bash_profile file
 
 export LESSCHARSET=utf-8
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
 alias l='ls --show-control-chars --color=auto'
 alias la='ls -aF --show-control-chars --color=auto'
 alias ll='ls -alF --show-control-chars --color=auto'
 alias ls='ls --show-control-chars --color=auto'
+alias ws='cd f:/github'
 alias win='winpty'
-alias python='python -i'
+#alias python='python -i'
+
+export GOPATH=~/go
+
 
 # source the users bashrc if it exists
 if [ -f "${HOME}/.bashrc" ] ; then
@@ -42,6 +48,4 @@ fi
 # if [ -d "${HOME}/info" ]; then
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
-
-mount -fo binary,noacl,posix=0,user D:/workspace ~/workspace
-mount -fo binary,noacl,posix=0,user "D:/Program Files (x86)/Vim/vimfiles" ~/vimfiles
+#mount -fo binary,noacl,posix=0,user f:/github ~/workspace

@@ -18,6 +18,7 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
+set noshelltemp
 # Shell Options
 #
 # See man bash for more options...

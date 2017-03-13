@@ -22,8 +22,6 @@ else
     let g:isGUI = 0
 endif
 
-"let $TMP="f:/tmp"
-
 
 " =============================================================================
 "                          << 以下为软件默认配置 >>
@@ -118,7 +116,6 @@ endif
 
 set nocompatible                                      "禁用 Vi 兼容模式
 "filetype off                                          "禁用文件类型侦测
-
 if g:islinux
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
@@ -126,9 +123,6 @@ else
     set rtp+=$VIM/vimfiles/bundle/vundle/
     call vundle#rc('$VIM/vimfiles/bundle/')
 endif
-
-" Markdown
-au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
 
 " 使用Vundle来管理插件，这个必须要有。
 Bundle 'gmarik/vundle'
@@ -157,6 +151,19 @@ Bundle 'taglist.vim'
 Bundle 'TxtBrowser'
 Bundle 'ZoomWin'
 Bundle 'OrangeT/vim-csharp'
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-dispatch'
+Bundle 'moll/vim-node'
+Bundle 'maksimr/vim-jsbeautify'
+
+
+".vimrc
+map <c-f> :call JsBeautify()<cr>
+let $TMP="f:/vimtmp"
+
+" Markdown
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " -----------------------------------------------------------------------------
 "  < 编码配置 >
@@ -194,6 +201,8 @@ set foldenable                                        "启用折叠
 "set foldmethod=indent                                 "indent 折叠方式
 " set foldmethod=marker                                "marker 折叠方式
 set foldmethod=manual
+
+
 
 " 常规模式下用空格键来开关光标行所在折叠（注：zR 展开所有折叠，zM 关闭所有折叠）
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
@@ -233,7 +242,7 @@ set number                                            "显示行号
 set laststatus=2                                      "启用状态栏信息
 set cmdheight=2                                       "设置命令行的高度为2，默认为1
 set cursorline                                        "突出显示当前行
-set guifont=YaHei_Consolas_Hybrid:h10                 "设置字体:字号（字体名称空格用下划线代替）
+set guifont=hack:h9                "设置字体:字号（字体名称空格用下划线代替）
 "set nowrap                                            "设置不自动换行
 set shortmess=atI                                     "去掉欢迎界面
 
@@ -246,9 +255,9 @@ endif
 
 " 设置代码配色方案
 if g:isGUI
-    colorscheme Tomorrow-Night               "Gvim配色方案
+    colorscheme solarized                  "Gvim配色方案
 else
-    colorscheme Tomorrow-Night-Eighties               "终端配色方案
+    colorscheme Tomorrow-Night-Eighties    "终端配色方案
 endif
 
 " 显示/隐藏菜单栏、工具栏、滚动条，可用 Ctrl + F11 切换
@@ -274,7 +283,7 @@ endif
 " -----------------------------------------------------------------------------
 set writebackup                             "保存文件前建立备份，保存成功后删除该备份
 set nobackup                                "设置无备份文件
-" set noswapfile                              "设置无临时文件
+set noswapfile                              "设置无临时文件
 " set vb t_vb=                                "关闭提示音
 
 
