@@ -31,6 +31,8 @@ endif
 "  < Windows Gvim 默认配置> 做了一点修改
 " -----------------------------------------------------------------------------
 if (g:iswindows && g:isGUI)
+    set shell=cmd.exe
+    set shellcmdflag=/C
     source $VIMRUNTIME/vimrc_example.vim
     source $VIMRUNTIME/mswin.vim
     behave mswin
