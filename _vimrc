@@ -158,11 +158,13 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-dispatch'
 Bundle 'moll/vim-node'
 Bundle 'maksimr/vim-jsbeautify'
+Bundle 'MattesGroeger/vim-bookmarks'
 
 
 ".vimrc
-map <c-f> :call JsBeautify()<cr>
+"map <c-f> :call JsBeautify()<cr>
 let $TMP="f:/vimtmp"
+let $TEMP="f:/vimtmp"
 
 " Markdown
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
@@ -553,3 +555,29 @@ au BufRead,BufNewFile,BufEnter * cd %:p:h
 " 下面的设置取消注释，并修改双引号中的键为你想要的，如修改为逗号键。
 
 " let mapleader = ","
+
+
+
+au BufNewFile,BufRead *.log	set syntax=txt
+
+" Pascal / Delphi 
+if (1==1)	"change to "1==0" to use original syntax 
+  au BufNewFile,BufRead *.pas,*.PAS	set syntax=delphi 
+else 
+  au BufNewFile,BufRead *.pas,*.PAS	set syntax=pascal 
+endif 
+" Delphi project file 
+au BufNewFile,BufRead *.dpr,*.DPR	set syntax=delphi 
+" Delphi form file 
+au BufNewFile,BufRead *.dfm,*.DFM	set syntax=delphi 
+au BufNewFile,BufRead *.xfm,*.XFM	set syntax=delphi 
+" Delphi package file 
+au BufNewFile,BufRead *.dpk,*.DPK	set syntax=delphi 
+" Delphi .DOF file = INI file for MSDOS 
+au BufNewFile,BufRead *.dof,*.DOF	set ft=dosini 
+au BufNewFile,BufRead *.kof,*.KOF	set ft=dosini 
+au BufNewFile,BufRead *.dsk,*.DSK	set ft=dosini 
+au BufNewFile,BufRead *.desk,*.DESK	set ft=dosini 
+au BufNewFile,BufRead *.dti,*.DTI	set ft=dosini 
+" Delphi .BPG = Makefile 
+au BufNewFile,BufRead *.bpg,*.BPG	set ft=make|setlocal makeprg=make\ -f\ % 
